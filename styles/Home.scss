@@ -1,0 +1,308 @@
+body{
+  background-color: var(--white);
+}
+
+:root{
+  --black:#0C0B21;
+  --white:white;
+}
+
+:root .darkMode{
+  --black:white;
+  --white:#0C0B21;
+}
+
+section.Home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.557);
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("https://wallpaperboat.com/wp-content/uploads/2019/04/witcher-3-031.jpg");
+    background-position:center;
+    background-position-y: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+    .container{
+      margin-right: 30px;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+
+      h1{
+        font-size: 35px;
+        text-align: left;
+      }
+
+      .join_streaming{
+        background-color: rgb(255, 123, 0);
+        letter-spacing: 3px;
+        padding: 10px;
+        border-radius:5px;
+      }
+
+    }
+
+    p {
+      max-width: 400px;
+      text-align: left;
+    }
+
+    a{
+      height: fit-content;
+      height: fit-content;
+      width: fit-content;
+      width: fit-content;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      background-color: rgb(255, 136, 0);
+      outline: none;
+      border: none;
+      color: white;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+
+}
+
+/*======Top popular games=====*/
+
+.top-popular-games-container,
+.All_Games_Section{
+  display: flex;
+  flex-direction: column;
+  padding: 0 60px;
+  margin-top: 50px;
+  color: white;
+}
+
+.games-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  color: white;
+
+  .game{
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1b3f;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    width: 300px;
+
+    .game_image_container{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 300px;
+      height: 250px;
+
+      .game_cover_details{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .game_rates_quantity_and_rates{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        position: absolute;
+        bottom: 10px;
+      
+        span.rates_quantity{
+          background-color: red;
+          padding: 5px;
+          padding: 3px 15px;
+          border-radius: 5px 50px;
+        }
+
+        span{
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+        }
+
+        span.game_rates{
+          color: #0092A3;
+        }
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+        border-radius:5px;
+        object-fit: cover;
+      }
+
+    }
+
+  }
+}
+
+.game_cover_small_details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 10px;
+
+  .game_cover_dates{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+    span{
+      display: flex;
+      font-size: 12px;
+    }
+  }
+
+  button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    height: 30px;
+    width: 80px;
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+} 
+
+.game_name{
+  padding:0 10px;
+  font-size:18px;
+  margin-bottom: 0;
+}
+
+.section_title{
+  position: relative;
+  color: var(--black);
+}
+
+.section_title::after{
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color:#99267B;
+  bottom: -10px;
+  left: 0;
+  border-radius: 50px;
+}
+
+.SEE-MORE-GAMES-Btn{
+  background-color: #99267B;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 10px 0;
+  align-self: center;
+  width: fit-content;
+  margin-top: 20px;
+
+  a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding:10px 20px;
+    border-radius: 2px;
+  }
+}
+
+.All_Games_Section{
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+
+  .section_title{
+    align-self: center;
+    width: fit-content;
+    margin-top: 20px;
+  
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .games_page_navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    width: 200px;
+    margin-top: 30px;
+
+    div{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+    }
+  }
+}
+
+.search_container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin:30px 0;
+  border-radius: 3px;
+
+  input{
+    padding:5px 10px;
+    border: none;
+    outline: none;
+  }
+  
+  button{
+    padding:5px 10px;
+    border: none;
+    background-color: #99267B;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .All_Games_Section{
+    padding:0 20px;
+  }
+
+  .games-list .game .game_image_container {
+    width: 250px;
+    height: 200px;
+  }
+
+  .games-list .game{
+    width: 250px;
+  }
+
+  .game_cover_small_details button{
+    padding:0;
+  }
+
+  .game_cover_small_details button a{
+    font-size: 10px;
+  }
+
+}
